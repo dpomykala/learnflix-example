@@ -10,7 +10,7 @@ requires-python = ">=3.13"
 dependencies = []
 
 [project.scripts]
-learnflix = "learnflix:main"
+learnflix = "learnflix.main:main"
 
 [build-system]
 requires = ["hatchling"]
