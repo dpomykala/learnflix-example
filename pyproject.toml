@@ -1,0 +1,17 @@
+[project]
+name = "learnflix"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Damian Pomykała", email = "168227269+dpomykala@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+learnflix = "learnflix:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
