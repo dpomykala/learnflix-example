@@ -1,0 +1,40 @@
+site_name: Learnflix Documentation
+site_dir: docs_dist
+
+nav:
+  - Home: index.md
+  - requirements.md
+  - User Stories:
+      - Overview: user-stories/index.md
+      - Registration: user-stories/registration.md
+  - architecture.md
+  - development.md
+  - roadmap.md
+  - glossary.md
+  - reference.md
+
+theme:
+  name: material  # https://squidfunk.github.io/mkdocs-material/
+  features:
+    - search.highlight
+    - search.suggest
+
+plugins:
+  - search
+
+markdown_extensions:
+
+  # Python Markdown
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/
+  - admonition
+  - def_list
+  - toc:
+      permalink: true
+
+  # Python Markdown Extensions
+  # https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
