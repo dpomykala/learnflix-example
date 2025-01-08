@@ -8,3 +8,4 @@ Welcome to the documentation for **Learnflix** - the best online learning platfo
 - [Development Guidelines](development.md)
 - [Roadmap](roadmap.md)
 - [Glossary](glossary.md)
+- [API Reference](reference.md)

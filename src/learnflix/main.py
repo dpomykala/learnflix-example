@@ -1,3 +1,7 @@
 def main() -> None:
-    print("Hello from learnflix!")
+    """Run the Learnflix application.
 
+    This is the entry point for the application, available as an executable
+    inside the project virtual environment.
+    """
+    print("Hello from Learnflix!")
