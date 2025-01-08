@@ -21,32 +21,35 @@ TODO: Extend documentation
 To work with the project locally:
 
 1. Clone the repository.
-2. Make sure you have [uv](https://docs.astral.sh/uv/) installed in your system.
+2. Install [uv](https://docs.astral.sh/uv/).
+3. Install [just](https://github.com/casey/just).
+
+To list the most common tasks (recipes) used in the project:
+
+```shell
+just
+```
 
 ### Documentation
 
-To serve the documentation run the following command in the project root directory:
+To serve the documentation using a development server:
 
 ```shell
-uv run mkdocs serve
+just docs-serve
 ```
 
-The documentation will be served at http://127.0.0.1:8000/.
-
-You can also build the documentation pages with the following command:
+To build the documentation:
 
 ```shell
-uv run mkdocs build
+just docs-build
 ```
-
-This will create the `docs_dist` directory containing the generated HTML files.
 
 ### Tests
 
-To execute all tests run the following command in the project root directory:
+To run all tests:
 
 ```shell
-uv run pytest
+just test
 ```
 
 ### Running the application
