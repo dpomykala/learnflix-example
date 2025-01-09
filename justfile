@@ -1,4 +1,5 @@
-docs_build_dir := "./docs_dist"
+docs_build_dir := "docs_dist"
+git_ignore_revs_file := ".git-blame-ignore-revs"
 
 # List all recipes
 default:
@@ -7,6 +8,7 @@ default:
 # Set up the project
 [group("dev")]
 setup:
+    git config blame.ignoreRevsFile {{ git_ignore_revs_file }}
     uv run pre-commit install
 
 # Run all pre-commit hooks for staged files
