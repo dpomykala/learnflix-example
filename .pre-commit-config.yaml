@@ -6,10 +6,23 @@ repos:
       - id: check-executables-have-shebangs
       - id: check-json
       - id: check-shebang-scripts-are-executable
+      - id: check-symlinks
       - id: check-toml
       - id: check-yaml
+      - id: debug-statements
       - id: end-of-file-fixer
       - id: trailing-whitespace
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.3.0
+    hooks:
+      - id: codespell
+
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.10.0
+    hooks:
+      - id: shellcheck
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version
     rev: v0.9.0
@@ -20,3 +33,12 @@ repos:
       # Run the formatter
       # This should be run AFTER all the code changing hooks!
       - id: ruff-format
+
+  - repo: local
+    hooks:
+      - id: justfile-fmt
+        name: format the justfile
+        entry: just --unstable --fmt
+        language: system
+        files: (?i)^\.?justfile$
+        pass_filenames: false

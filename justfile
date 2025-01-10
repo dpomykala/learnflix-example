@@ -13,17 +13,18 @@ setup:
 
 # Run all pre-commit hooks for staged files
 [group("dev")]
-fix:
+hooks:
     uv run pre-commit run
 
-# Lint all files with Ruff
+# Lint all files
 [group("dev")]
 lint:
     uv run ruff check
 
-# Format all files with Ruff
+# Format all files
 [group("dev")]
 fmt:
+    just --unstable --fmt
     uv run ruff format
 
 # Serve the documentation
