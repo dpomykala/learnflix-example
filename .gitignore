@@ -9,5 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
+# Test coverage
+coverage/
+
 # MkDocs build
 docs_dist/

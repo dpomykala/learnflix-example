@@ -46,3 +46,8 @@ docs-clean:
 [group("tests")]
 test:
     uv run pytest
+
+# Run all tests with coverage and generate an HTML report
+[group("tests")]
+test-cov:
+    uv run pytest --cov --no-cov-on-fail --cov-report=term --cov-report=html
