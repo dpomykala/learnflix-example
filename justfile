@@ -1,3 +1,5 @@
+# just: https://just.systems
+
 docs_build_dir := "docs_dist"
 git_ignore_revs_file := ".git-blame-ignore-revs"
 

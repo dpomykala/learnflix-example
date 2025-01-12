@@ -1,3 +1,5 @@
+# pre-commit: https://pre-commit.com
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -12,6 +14,7 @@ repos:
       - id: debug-statements
       - id: end-of-file-fixer
       - id: trailing-whitespace
+        args: [ --markdown-linebreak-ext=md ]
 
   - repo: https://github.com/codespell-project/codespell
     rev: v2.3.0
@@ -29,7 +32,7 @@ repos:
     hooks:
       # Run the linter and fix any fixable issues
       - id: ruff
-        args: [--fix]
+        args: [ --fix ]
       # Run the formatter
       # This should be run AFTER all the code changing hooks!
       - id: ruff-format

@@ -1,0 +1,23 @@
+# EditorConfig: https://editorconfig.org/
+
+root = true
+
+[*]
+charset = utf-8
+# Unix-style newlines
+end_of_line = lf
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+# Markdown uses trailing spaces to indicate a line break
+trim_trailing_whitespace = false
+
+[*.{css,html,js,json,yml,yaml,xml}]
+indent_size = 2
+
+[Makefile]
+# Makefiles require tabs for indentation
+indent_style = tab

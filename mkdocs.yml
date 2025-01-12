@@ -1,3 +1,5 @@
+# MkDocs: https://www.mkdocs.org
+
 site_name: Learnflix Documentation
 site_dir: docs_dist
 
@@ -26,7 +28,7 @@ plugins:
         python:
           options:
             show_submodules: true
-          paths: [src]
+          paths: [ src ]
 
 markdown_extensions:
 
