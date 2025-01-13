@@ -26,6 +26,11 @@ repos:
     hooks:
       - id: shellcheck
 
+  - repo: https://github.com/RobertCraigie/pyright-python
+    rev: v1.1.391
+    hooks:
+      - id: pyright
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version
     rev: v0.9.0

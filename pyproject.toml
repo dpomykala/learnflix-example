@@ -39,6 +39,11 @@ sort = "-cover"
 [tool.coverage.html]
 directory = "coverage/html"
 
+[tool.pyright]
+include = ["src", "tests"]
+venv = ".venv"
+venvPath = "."
+
 [tool.ruff]
 required-version = "==0.9.0"
 
