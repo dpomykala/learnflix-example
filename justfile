@@ -31,13 +31,16 @@ fmt:
 
 # Serve the documentation
 [group("docs")]
-docs-serve:
+docs-serve: _uv_sync_docs
     uv run mkdocs serve
 
 # Build the documentation
 [group("docs")]
-docs-build:
+docs-build: _uv_sync_docs
     uv run mkdocs build
+
+_uv_sync_docs:
+    uv sync --group docs
 
 # Remove the built documentation
 [group("docs")]
@@ -53,3 +56,11 @@ test:
 [group("tests")]
 test-cov:
     uv run pytest --cov --no-cov-on-fail --cov-report=term --cov-report=html
+
+# Type-check all files
+[group("types")]
+types: _uv_sync_types
+    uv run pyright
+
+_uv_sync_types:
+    uv sync --group types
